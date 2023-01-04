@@ -111,8 +111,8 @@ for spk in ${spks}; do
     num_deveval=$((num_dev + num_eval))
     num_train=$((num_all - num_deveval))
     utils/subset_data_dir.sh --last "data/${spk}_train" "${num_deveval}" "data/${spk}_deveval"
-    utils/subset_data_dir.sh --first "data/${spk}_deveval" "${num_dev}" "data/${spk}_${eval_set}"
-    utils/subset_data_dir.sh --last "data/${spk}_deveval" "${num_eval}" "data/${spk}_${dev_set}"
+    utils/subset_data_dir.sh --first "data/${spk}_deveval" "${num_dev}" "data/${spk}_${dev_set}"
+    utils/subset_data_dir.sh --last "data/${spk}_deveval" "${num_eval}" "data/${spk}_${eval_set}"
     utils/subset_data_dir.sh --first "data/${spk}_train" "${num_train}" "data/${spk}_${train_set}"
 
     # remove tmp directories
